@@ -13,7 +13,7 @@ function getRandomAlphabet() {
     const alphabetlist = 'abcdefghijklmnopqrstuvwxyz';
     const alphabetArray = alphabetlist.split('');
 
-    const getrandom = Math.random() * 26;
+    const getrandom = Math.random() * 25;
     const randomIndex = parseInt(getrandom)
     const randomAlphabet = alphabetArray[randomIndex];
     return randomAlphabet;
@@ -32,6 +32,7 @@ function scoreUp() {
     const prevScore = parseInt(scoreFieldText);
     const newScore = prevScore + 1;
     addDataById('score', newScore);
+    return newScore;
 }
 
 // function for life down
@@ -54,3 +55,6 @@ function removeBgById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.remove('bg-yellow-500');
 }
+
+
+// function for gameplay
